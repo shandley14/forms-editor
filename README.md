@@ -1,6 +1,6 @@
 # SupplyChain 8 DEV - Forms Editor
 
-This source code is part of [SupplyChain 8 DEV - Forms Editor](https://www.djamware.com/post/5bca67d780aca7466989441f/angular-7-tutorial-building-crud-web-application) .
+This source code is part of [SupplyChain 8 DEV - Forms Editor](https://github.com/shandley14/forms-editor) .
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
 
