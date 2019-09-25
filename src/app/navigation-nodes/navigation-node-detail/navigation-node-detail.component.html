@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf="isLoadingResults">
+    Loading Results
+  </div>
+  <div class="button-row">
+    <a [routerLink]="['/navigation-nodes']">Back to List</a>
+  </div>
+
+  <h2>{{ navigationNodes.data.name }}</h2>
+  <h3>{{ navigationNodes.data.id }}</h3>
+  <dl>
+    <dt>Name:</dt>
+    <dd>{{ navigationNodes.data.name }}</dd>
+    <dt>ID:</dt>
+    <dd>{{ navigationNodes.data.id }}</dd>
+    <dt>Code:</dt>
+    <dd>{{ navigationNodes.data.code }}</dd>
+  </dl>
+
+  <div>
+    <a [routerLink]="['/navigation-node-edit', navigationNode.data.id]">Edit</a>
+  </div>
+</div>

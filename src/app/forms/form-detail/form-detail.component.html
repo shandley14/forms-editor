@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf="isLoadingResults">
+    Loading Results
+  </div>
+  <div class="button-row">
+    <a [routerLink]="['/forms']">Back to List</a>
+  </div>
+
+  <h2>{{ form.data.name }}</h2>
+  <h3>{{ form.data.id }}</h3>
+  <dl>
+    <dt>Name:</dt>
+    <dd>{{ form.data.name }}</dd>
+    <dt>ID:</dt>
+    <dd>{{ form.data.id }}</dd>
+    <dt>Code:</dt>
+    <dd>{{ form.data.code }}</dd>
+  </dl>
+
+  <div>
+    <a [routerLink]="['/form-edit', form.data.id]">Edit</a>
+  </div>
+</div>

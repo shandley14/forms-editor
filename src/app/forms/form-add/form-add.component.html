@@ -1,0 +1,22 @@
+<div class="example-container">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    Loading
+  </div>
+  <div class="button-row">
+    <a color="primary" [routerLink]="['/forms']">list</a>
+  </div>
+
+  <form [formGroup]="formForm" (ngSubmit)="onFormSubmit(formForm.value)">
+    <input placeholder="ID" formControlName="id" />
+
+    <input placeholder="Code" formControlName="code" />
+
+    <input placeholder="Name" formControlName="name" />
+
+    <div class="button-row">
+      <button type="submit" [disabled]="!formForm.valid" color="primary">
+        save
+      </button>
+    </div>
+  </form>
+</div>

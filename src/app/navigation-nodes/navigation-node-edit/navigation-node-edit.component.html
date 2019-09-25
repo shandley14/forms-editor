@@ -1,0 +1,59 @@
+<div class="example-loading-shade" *ngIf="isLoadingResults">
+  LOADING RESULTS
+</div>
+<div class="button-row">
+  <a (click)="navigationNodeDetails()">Back to Details</a>
+</div>
+
+<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12 ui-md-6">
+      <form
+        [formGroup]="navigationNodeForm"
+        (ngSubmit)="onFormSubmit(navigationNodeForm.value)"
+      >
+        <div class="ui-g-4">
+          ID
+        </div>
+        <div class="ui-g-8">
+          <input
+            id="input"
+            type="text"
+            size="30"
+            pInputText
+            formControlName="id"
+          />
+        </div>
+        <div class="ui-g-4">
+          NAME
+        </div>
+        <div class="ui-g-8">
+          <input
+            id="input"
+            type="text"
+            size="30"
+            pInputText
+            formControlName="name"
+          />
+        </div>
+        <div class="ui-g-4">
+          CODE
+        </div>
+        <div class="ui-g-8">
+          <input
+            id="input"
+            type="text"
+            size="30"
+            pInputText
+            formControlName="code"
+          />
+        </div>
+        <div class="button-row">
+          <button type="submit" [disabled]="!navigationNodeForm.valid">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
